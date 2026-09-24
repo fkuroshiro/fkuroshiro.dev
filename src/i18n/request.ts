@@ -5,17 +5,15 @@ import { notFound } from "next/navigation";
 import { routing } from "./routing";
 
 export default getRequestConfig(async () => {
-  const paramValue = await rootParams.locale();
-
   let locale;
-  if (hasLocale(routing.locales, paramValue)) {
-    locale = paramValue;
+  if (hasLocale(routing.locales, await rootParams.locale())) {
+    locale = await rootParams.locale();
   } else {
     notFound();
   }
 
   return {
     locale,
-    messages: (await import(`../../messages/${locale}.json`)).default,
+    messages: (await import(`@/messages/${locale}.json`)).default,
   };
 });
