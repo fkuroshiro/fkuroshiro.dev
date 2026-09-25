@@ -1,5 +1,32 @@
 {
   "Test": {
     "text": "testing"
+  },
+
+  "CookieConsent": {
+    "title": "Cookie usage",
+    "description": "We use cookies to ensure basic site functionality and improve your experience. You can choose whether to allow cookies for each category.",
+    "necessary": {
+      "title": "Strictly necessary cookies",
+      "description": "These cookies are necessary for our website to work correctly. Without them, the site wouldn't function properly."
+    },
+    "analytics": {
+      "title": "Performance & analytics cookies",
+      "description": "These cookies let us measure traffic and analyze visitor behavior to improve how the site works."
+    },
+    "save": "Save preferences",
+    "acceptAll": "Accept all"
+  },
+
+  "home": {
+    "eyebrow": "Web Developer",
+    "heading": "Hi, I'm fkuroshiro",
+    "subheading": "I build fast, accessible web applications with modern tools like Next.js, TypeScript, and Tailwind CSS.",
+    "badge": "Available for new projects",
+    "email": "hello@fkuroshiro.dev",
+    "github": "@fkuroshiro"
+  },
+  "footer": {
+    "copyright": "© {year} fkuroshiro.dev — All rights reserved."
   }
 }

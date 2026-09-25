@@ -1,5 +1,32 @@
 {
   "Test": {
     "text": "testování"
+  },
+
+  "CookieConsent": {
+    "title": "Používání cookies",
+    "description": "Používáme cookies pro zajištění základních funkcí webu a pro zlepšení vašeho online zážitku. Pro každou kategorii si můžete vybrat, zda chcete cookies povolit či nikoliv.",
+    "necessary": {
+      "title": "Nezbytně nutné cookies",
+      "description": "Tyto cookies jsou nezbytné pro správné fungování našeho webu. Bez těchto cookies by web nefungoval správně."
+    },
+    "analytics": {
+      "title": "Výkonnostní a analytické cookies",
+      "description": "Tyto cookies nám umožňují měřit návštěvnost a analyzovat chování návštěvníků pro zlepšení fungování webu."
+    },
+    "save": "Uložit nastavení",
+    "acceptAll": "Přijmout vše"
+  },
+
+  "home": {
+    "eyebrow": "Webový vývojář",
+    "heading": "Ahoj, jsem fkuroshiro",
+    "subheading": "Vytvářím rychlé a přístupné webové aplikace pomocí moderních nástrojů jako Next.js, TypeScript a Tailwind CSS.",
+    "badge": "K dispozici pro nové projekty",
+    "email": "hello@fkuroshiro.dev",
+    "github": "@fkuroshiro"
+  },
+  "footer": {
+    "copyright": "© {year} fkuroshiro.dev — Všechna práva vyhrazena."
   }
 }

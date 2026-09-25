@@ -3,6 +3,8 @@ import { hasLocale, NextIntlClientProvider } from "next-intl";
 import { getMessages } from "next-intl/server";
 import { notFound } from "next/navigation";
 import { routing } from "@/i18n/routing";
+import { cookies } from "next/headers";
+import { GoogleTagManagerGate } from "@/ui/components/GoogleTagManagerGate";
 import "@/globals.css";
 
 //=== VIEWPORT ===
@@ -79,11 +81,19 @@ export default async function RootLayout({
     notFound();
   }
 
+  const cookieStore = await cookies();
+  const consentCookie = cookieStore.get("gtm-consent")?.value;
+  const initialConsent =
+    consentCookie === "granted" || consentCookie === "denied"
+      ? consentCookie
+      : null;
+
   return (
     <html lang={locale}>
       <body>
         <NextIntlClientProvider messages={await getMessages()}>
           {children}
+          <GoogleTagManagerGate initialConsent={initialConsent} />
         </NextIntlClientProvider>
       </body>
     </html>
