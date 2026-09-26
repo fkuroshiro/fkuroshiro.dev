@@ -99,6 +99,7 @@ export function GoogleTagManagerGate({
                     <span
                       role="switch"
                       aria-checked={analyticsEnabled}
+                      aria-label={t("analytics.title")}
                       tabIndex={0}
                       onClick={(e) => {
                         e.stopPropagation();
@@ -144,7 +145,7 @@ export function GoogleTagManagerGate({
                 </button>
                 <button
                   onClick={handleAcceptAll}
-                  className="cursor-pointer rounded-md bg-accent px-4 py-2.5 text-sm duration-300 hover:drop-shadow-lg hover:drop-shadow-accent/50 lg:py-2"
+                  className="cursor-pointer rounded-md bg-accent px-4 py-2.5 text-sm font-black duration-300 hover:drop-shadow-lg hover:drop-shadow-accent/50 lg:py-2"
                 >
                   {t("acceptAll")}
                 </button>

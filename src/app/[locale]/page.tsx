@@ -16,7 +16,7 @@ export default async function Home() {
         <p className="text-sm lg:text-md max-w-md text-balance text-muted">
           {t("subheading")}
         </p>
-        <div className="mt-4 flex items-center gap-3 rounded-full border border-accent-purple/60 bg-surface px-4 py-2 font-mono text-xs lg:text-base text-accent shadow-[0_0_24px_-6px_var(--accent-purple)]">
+        <div className="mt-4 flex items-center gap-3 rounded-full border-2 border-accent-purple bg-surface px-4 py-2 font-mono text-xs font-semibold lg:text-base text-accent drop-shadow-sm drop-shadow-accent">
           <span className="relative flex size-2">
             <span className="absolute inline-flex h-full w-full animate-ping rounded-full bg-accent opacity-60" />
             <span className="relative inline-flex size-2 rounded-full bg-accent" />
