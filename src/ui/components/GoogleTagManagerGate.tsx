@@ -42,7 +42,7 @@ export function GoogleTagManagerGate({
     <>
       {consent === null && (
         <div
-          className={`fixed inset-x-0 bottom-0 z-50 flex justify-center px-2 pb-2 transition-all duration-300 ease-in-out lg:px-4 lg:pb-4 drop-shadow-2xl drop-shadow-accent/0 ${
+          className={`fixed inset-x-0 bottom-0 z-50 flex justify-center px-2 pb-2 transition-all duration-300 ease-in-out lg:px-4 lg:pb-4 drop-shadow-2xl drop-shadow-accent ${
             leaving ? "translate-y-4 opacity-0" : "translate-y-0 opacity-100"
           }`}
           style={{

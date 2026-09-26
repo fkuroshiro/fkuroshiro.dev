@@ -1,11 +1,17 @@
 import type { Metadata, Viewport } from "next";
 import { hasLocale, NextIntlClientProvider } from "next-intl";
-import { getMessages } from "next-intl/server";
+import { getMessages, getLocale } from "next-intl/server";
 import { notFound } from "next/navigation";
 import { routing } from "@/i18n/routing";
 import { cookies } from "next/headers";
 import { GoogleTagManagerGate } from "@/ui/components/GoogleTagManagerGate";
+import { Geist } from "next/font/google";
 import "@/globals.css";
+
+//=== Fonts ===
+const geist = Geist({
+  subsets: ["latin"],
+});
 
 //=== VIEWPORT ===
 export const viewport: Viewport = {
@@ -63,19 +69,10 @@ export const metadata: Metadata = {
   },
 };
 
-//=== i18n ===
-export function generateStaticParams() {
-  return routing.locales.map((locale) => ({ locale }));
-}
-
 export default async function RootLayout({
   children,
-  params,
-}: {
-  children: React.ReactNode;
-  params: Promise<{ locale: string }>;
-}) {
-  const { locale } = await params;
+}: LayoutProps<"/[locale]">) {
+  const locale = await getLocale();
 
   if (!hasLocale(routing.locales, locale)) {
     notFound();
@@ -89,7 +86,7 @@ export default async function RootLayout({
       : null;
 
   return (
-    <html lang={locale}>
+    <html lang={locale} className={geist.className}>
       <body>
         <NextIntlClientProvider messages={await getMessages()}>
           {children}

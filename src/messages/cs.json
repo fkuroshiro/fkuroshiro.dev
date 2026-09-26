@@ -28,5 +28,9 @@
   },
   "footer": {
     "copyright": "© {year} fkuroshiro.dev — Všechna práva vyhrazena."
+  },
+  "NotFound": {
+    "message": "Tady nic není",
+    "cta": "ZPĚT"
   }
 }

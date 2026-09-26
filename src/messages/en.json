@@ -28,5 +28,9 @@
   },
   "footer": {
     "copyright": "© {year} fkuroshiro.dev — All rights reserved."
+  },
+  "NotFound": {
+    "message": "There is nothing here",
+    "cta": "RETURN"
   }
 }
