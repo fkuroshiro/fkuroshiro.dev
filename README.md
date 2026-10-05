@@ -1,0 +1,7 @@
+# FKUROSHIRO.DEV
+
+## License
+
+This repository is public for portfolio and demonstration purposes only.
+All rights reserved — the source code is not licensed for reuse, copying,
+modification, or redistribution without my explicit permission.

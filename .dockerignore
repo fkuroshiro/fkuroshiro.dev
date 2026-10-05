@@ -1,0 +1,41 @@
+# dependencies and build output (the image installs and builds its own)
+node_modules
+.next
+out
+build
+coverage
+
+# version control and CI
+.git
+.gitignore
+.github
+
+# environment files and secrets
+.env
+.env.*
+!.env.example
+*.pem
+*.key
+doppler.yaml
+
+# docker files themselves
+Dockerfile
+.dockerignore
+docker-compose*.yml
+
+# tests and reports
+playwright-report
+test-results
+blob-report
+
+# editor, OS and logs
+.vscode
+.idea
+.DS_Store
+Thumbs.db
+*.log
+npm-debug.log*
+
+# docs
+README.md
+docs

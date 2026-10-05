@@ -1,0 +1,21 @@
+services:
+  portfolio:
+    image: ghcr.io/fkuroshiro/fkuroshiro.dev:latest
+    container_name: portfolio
+    restart: unless-stopped
+    expose:
+      - "3000"
+    security_opt:
+      - no-new-privileges:true
+    healthcheck:
+      test: ["CMD", "wget", "-qO", "/dev/null", "http://127.0.0.1:3000/"]
+      interval: 30s
+      timeout: 5s
+      retries: 3
+      start_period: 20s
+    networks:
+      - proxy-net
+
+networks:
+  proxy-net:
+    external: true
