@@ -58,3 +58,8 @@ Thumbs.db
 # misc
 *.log
 *.local
+
+
+# agents
+AGENTS.md
+CLAUDE.md
